@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 /*SECTION 1 - CABEÇALHO*/
 .cabecalho {
   border: 30px solid;
@@ -22,6 +23,7 @@ body {
   font-size: 1em;
   cursor: pointer;
 }
+
 /*SECTION 2 - TÍTULO E DESCRIÇÃO*/
 .titulo {
   font-size: 3em;
@@ -40,7 +42,6 @@ body {
   text-align: center;
 }
 
-
 /*SECTION 3 - DESENVOLVIMENTO*/
 .desenvolvimento {
   font-size: 1.5em;
@@ -53,4 +54,27 @@ body {
   bottom: 0;
   width: 100%;
   background-color: white;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .cabecalho {
+    padding: 1em;
+    border-width: 15px;
+  }
+  .cabecalho button {
+    padding: 0.5em;
+    margin: 0.2em;
+    font-size: 0.8em;
+  }
+  .titulo {
+    font-size: 2em;
+  }
+  .descricao {
+    font-size: 1.2em;
+  }
+  .desenvolvimento {
+    font-size: 1em;
+    padding: 0.5em;
+  }
 }
