@@ -6,22 +6,30 @@ body {
 
 /*SECTION 1 - CABEÇALHO*/
 .cabecalho {
-  border: 30px solid;
-  background-color: #8f1919;
-  color: #272525;
-  padding: 0.5em;
-  align-items: center;
+  background-color: #313030;
+  color: #ffffff;
+  padding: 1.5em;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 .cabecalho button {
-  color: #272525;
+  width: 100px;
+  background: #2e6c77;
   font-weight: bold;
-  border: 2px solid #ffffff;
-  border-radius: 10px;
-  padding: 0.5em;
-  margin: 0.5em;
-  font-size: 1em;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
   cursor: pointer;
+  padding: 10px;
+  margin: 10px 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cabecalho button:hover {
+  box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 3px #ffffff;
 }
 
 /*SECTION 2 - TÍTULO E DESCRIÇÃO*/
@@ -56,23 +64,27 @@ body {
   background-color: white;
 }
 
-/* Media Queries for Mobile Devices */
+/*Queries pra celular*/
 @media (max-width: 768px) {
   .cabecalho {
     padding: 1em;
     border-width: 15px;
   }
+
   .cabecalho button {
     padding: 0.5em;
     margin: 0.2em;
     font-size: 0.8em;
   }
+
   .titulo {
     font-size: 2em;
   }
+
   .descricao {
     font-size: 1.2em;
   }
+
   .desenvolvimento {
     font-size: 1em;
     padding: 0.5em;
