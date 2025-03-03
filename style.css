@@ -1,0 +1,56 @@
+body {
+  font-size: small;
+  padding: 0;
+  margin: 0;
+}
+/*SECTION 1 - CABEÇALHO*/
+.cabecalho {
+  border: 30px solid;
+  background-color: #8f1919;
+  color: #272525;
+  padding: 0.5em;
+  align-items: center;
+  text-align: center;
+}
+.cabecalho button {
+  color: #272525;
+  font-weight: bold;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+}
+/*SECTION 2 - TÍTULO E DESCRIÇÃO*/
+.titulo {
+  font-size: 3em;
+  color: #e90808;
+  margin-bottom: 0.5em;
+  align-items: center;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.descricao {
+  font-size: 1.5em;
+  color: #000000;
+  margin-bottom: 1em;
+  align-items: center;
+  text-align: center;
+}
+
+
+/*SECTION 3 - DESENVOLVIMENTO*/
+.desenvolvimento {
+  font-size: 1.5em;
+  color: #000000;
+  margin-bottom: 1em;
+  align-items: center;
+  text-align: center;
+  border: 2px solid rgb(0, 0, 0);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
