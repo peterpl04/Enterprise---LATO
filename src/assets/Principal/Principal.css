@@ -1,42 +1,97 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* SEÇÃO CABEÇALHO */
+.cabecalho {
+  background-color: #313030;
+  color: #ffffff;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ajustando botões */
+.cabecalho button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin: 0.2em;
+}
+
+/* Ajuste para o Título (LATO) */
+.cabecalho h2 {
+  margin: 0;
+  font-size: 2.5em;
+  margin-right: 30px;
+}
+
+/* SEÇÃO TÍTULO E DESCRIÇÕES */
+.titulo {
+  color: #ffffff;
   text-align: center;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.descricao,
+.sobre-info {
+  color: #ffffff;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+button:hover {
+  border-color: #c63110;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* 🔹 RESPONSIVIDADE 🔹 */
+@media screen and (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    /* Empilha elementos no mobile */
+    align-items: center;
+    padding: 1em 0;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  /* 🔹 Ajustando o título no mobile 🔹 */
+  .cabecalho h2 {
+    font-size: 1.8em;
+    /* Diminuir tamanho do título */
+    margin-bottom: 15px;
+    /* Criar espaço entre o título e os botões */
+    margin-right: 0;
+    /* Remover a margem da versão desktop */
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  /* 🔹 Melhorando os botões 🔹 */
+  .cabecalho button {
+    width: 90%;
+    /* Botões ocupam mais espaço */
+    padding: 0.8em;
+    font-size: 1em;
+    margin-bottom: 10px;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  /* 🔹 Melhorando a leitura dos textos 🔹 */
+  .titulo {
+    font-size: 2em;
+    /* Diminuir um pouco o tamanho do título */
+  }
 
-.read-the-docs {
-  color: #888;
+  .descricao,
+  .sobre-info {
+    font-size: 1.1em;
+    /* Ajustar tamanho do texto para mobile */
+    padding: 10px;
+  }
 }

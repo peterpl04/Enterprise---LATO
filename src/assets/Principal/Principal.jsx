@@ -1,49 +1,51 @@
 import React, { useState } from "react";
+import "./Principal.css";
+import ProdSol from "../ProdSol/ProdSol"; // Importação correta
+import Contato from "../Contato/Contato";
 
 function Principal() {
   const [conteudo, setConteudo] = useState("");
   const [exibirDescricao, setExibirDescricao] = useState(true);
-  const [exibirProdSol, setExibirProdSol] = useState("");
-
-  const mostrarInicio = () => {
-    setExibirDescricao(true);
-    setConteudo("");
-    setExibirProdSol("");
-  };
+  const [exibirComponente, setExibirComponente] = useState(null);
+  const [exibirContato, setExibirContato] = useState(false);
 
   const mostrarProdSol = () => {
-    setExibirProdSol("Nossas soluções otimizam a produção, garantindo maior eficiência e segurança.");
+    setExibirComponente(<ProdSol />);
     setExibirDescricao(false);
     setConteudo("");
+    setExibirContato(false);
   };
 
   const mostrarSobre = () => {
     setConteudo("Empresa focada em soluções para a alimentação de linhas de produção, resolvendo problemas de ergonomia, com a eliminação da necessidade da aplicação de mão de obra em tarefas repetitivas.");
     setExibirDescricao(false);
-    setExibirProdSol("");
+    setExibirComponente(null);
+    setExibirContato(false);
   };
 
   const mostrarContato = () => {
-    setConteudo("Entre em contato conosco pelo e-mail lato@lato.ind.br ou pelo telefone (49) 98829-7638.");
+    setExibirContato(true);
+    setConteudo("");
     setExibirDescricao(false);
-    setExibirProdSol("");
+    setExibirComponente(null);
+    setExibirContato(<Contato />);
   };
 
   return (
     <div>
       <section className="cabecalho">
-        <button onClick={mostrarInicio}>Início</button>
+        <h2>LATO</h2>
         <button onClick={mostrarProdSol}>Produtos e Soluções</button>
-        <button onClick={mostrarContato}>Contato</button>
+        <button onClick={mostrarContato}>Serviços</button>
         <button onClick={mostrarSobre}>Sobre</button>
       </section>
 
       <h1 className="titulo">LATO</h1>
 
       {exibirDescricao && <p className="descricao">Instalação de máquinas e equipamentos industriais.</p>}
-      {exibirProdSol && <p className="descricao">{exibirProdSol}</p>}
       {conteudo && <p className="sobre-info">{conteudo}</p>}
-
+      {exibirContato}
+      {exibirComponente}
     </div>
   );
 }
