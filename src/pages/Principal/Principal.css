@@ -1,15 +1,41 @@
 /* SEÇÃO CABEÇALHO */
 .cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #313030;
   color: #ffffff;
   padding: 1em;
-  display: flex;
-  align-items: center;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Ajustando botões */
+.cabecalho-esquerda {
+  display: flex;
+  align-items: center;
+}
+
+.botoes-container {
+  display: flex;
+  align-items: center;
+}
+
+.acesso-clientes {
+  margin-left: auto;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.acesso-clientes:hover {
+  border-color: #c3aba6;
+}
+
 .cabecalho button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -27,7 +53,8 @@
 .cabecalho h2 {
   margin: 0;
   font-size: 2.5em;
-  margin-right: 30px;
+  margin-right: 25px;
+  align-items: center;
 }
 
 /* SEÇÃO TÍTULO E DESCRIÇÕES */
@@ -39,13 +66,13 @@
 
 .descricao,
 .sobre-info {
-  color: #ffffff;
+  color: #e6e5e5;
   text-align: center;
   box-sizing: border-box;
 }
 
 button:hover {
-  border-color: #c63110;
+  border-color: #c3aba6;
 }
 
 button:focus,
