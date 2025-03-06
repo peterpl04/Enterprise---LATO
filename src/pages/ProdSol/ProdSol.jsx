@@ -5,10 +5,8 @@ import prod2 from "../../assets/prod2.jpg";
 function ProdSol() {
 
   const produtos = [
-    { nome: "Máquina 1"},
-    { nome: "Máquina 2"},
-    { nome: "Máquina 3"},
-    { nome: "Máquina 4"}
+    { id: 1},
+    { id: 2},
   ];
   return (
     <>

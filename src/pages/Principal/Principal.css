@@ -82,43 +82,46 @@ button:focus-visible {
 
 /* 🔹 RESPONSIVIDADE 🔹 */
 @media screen and (max-width: 768px) {
+
   .cabecalho {
     flex-direction: column;
-    /* Empilha elementos no mobile */
     align-items: center;
-    padding: 1em 0;
     text-align: center;
+    padding: 1em;
   }
 
-  /* 🔹 Ajustando o título no mobile 🔹 */
+  .cabecalho-esquerda {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .cabecalho h2 {
     font-size: 1.8em;
-    /* Diminuir tamanho do título */
-    margin-bottom: 15px;
-    /* Criar espaço entre o título e os botões */
+    margin-bottom: 10px;
     margin-right: 0;
-    /* Remover a margem da versão desktop */
   }
 
-  /* 🔹 Melhorando os botões 🔹 */
-  .cabecalho button {
-    width: 90%;
-    /* Botões ocupam mais espaço */
+  .botoes-container {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .cabecalho button,
+  .acesso-clientes {
+    width: 100%;
     padding: 0.8em;
     font-size: 1em;
-    margin-bottom: 10px;
   }
 
-  /* 🔹 Melhorando a leitura dos textos 🔹 */
   .titulo {
     font-size: 2em;
-    /* Diminuir um pouco o tamanho do título */
+    padding: 5px;
   }
 
   .descricao,
   .sobre-info {
     font-size: 1.1em;
-    /* Ajustar tamanho do texto para mobile */
     padding: 10px;
   }
 }
