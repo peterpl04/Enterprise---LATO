@@ -37,15 +37,16 @@
 }
 
 .cabecalho button {
-  border-radius: 8px;
+  border-radius: 5px;
+  padding: 10px 15px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  background-color: var(--primary-color);  cursor: pointer;
+  color: var(--text-light);
+  transition: border-color 0.3s;
   margin: 0.2em;
 }
 
@@ -53,8 +54,9 @@
 .cabecalho h2 {
   margin: 0;
   font-size: 2.5em;
-  margin-right: 25px;
+  margin-right: 15px;
   align-items: center;
+  color: var(--secondary-color);
 }
 
 /* SEÇÃO TÍTULO E DESCRIÇÕES */
@@ -80,7 +82,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* 🔹 RESPONSIVIDADE 🔹 */
 @media screen and (max-width: 768px) {
 
   .cabecalho {
